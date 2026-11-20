@@ -152,6 +152,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.1; lett
 /* ---------- Footer ---------- */
 .site-footer { margin-top: 3rem; padding: 2rem 0 2.5rem; text-align: center; color: var(--muted); font-size: 0.9rem; }
 .site-footer p { margin: 0; }
+.site-footer .fineprint { margin-top: 0.35rem; font-size: 0.8rem; }
+.site-footer a { color: inherit; }
 .ornament { display: block; margin-bottom: 0.5rem; color: var(--gold); font-size: 1.4rem; }
 
 @media (prefers-reduced-motion: reduce) {

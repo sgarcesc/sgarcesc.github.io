@@ -38,6 +38,7 @@ plugins:
 exclude:
   - README.md
   - LICENSE
+  - CONTENT-LICENSE.md
   - CNAME
   - Gemfile
   - Gemfile.lock
