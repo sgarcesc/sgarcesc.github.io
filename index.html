@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<section class="hero wrap">
+  <p class="eyebrow">{{ site.author.role }} &middot; {{ site.author.location }}</p>
+  <h1>{{ site.author.name }}</h1>
+  <p class="lede">{{ site.tagline }} I build web applications and write about the craft every now and then.</p>
+  <ul class="links">
+    {%- for link in site.links %}
+    <li>
+      <a href="{{ link.url | relative_url }}"{% if link.url contains '://' %} rel="me noopener"{% endif %}>
+        {% include icon.html name=link.icon %}<span>{{ link.label }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<div class="wrap"><hr class="rule" aria-hidden="true"></div>
+
+<section id="about" class="wrap section">
+  <h2>About</h2>
+  <div class="cards">
+    <article class="card">
+      <h3>Work</h3>
+      <p>Software developer at <strong>{{ site.author.company }}</strong>, building for the web. Holder of the {{ site.author.credential }} certification.</p>
+    </article>
+    <article class="card">
+      <h3>Home</h3>
+      <p>Based in {{ site.author.location }}. Husband and father first; everything else fits around that.</p>
+    </article>
+    <article class="card">
+      <h3>Elsewhere</h3>
+      <p>A long-standing Tolkien fan, happiest somewhere between a good book and a long walk.</p>
+    </article>
+  </div>
+</section>
+
+<section id="writing" class="wrap section">
+  <h2>Writing</h2>
+  {%- if site.posts.size > 0 %}
+  <ol class="posts">
+    {%- for post in site.posts limit: 10 %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      {%- if post.excerpt %}<p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>{% endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+  {%- else %}
+  <p class="muted">Nothing here yet &mdash; the road goes ever on. New posts will show up here.</p>
+  {%- endif %}
+</section>

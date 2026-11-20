@@ -1,1 +1,46 @@
-theme: jekyll-theme-cayman
+title: Sebastian Garces
+tagline: Husband, father, Tolkien fan.
+description: >-
+  Personal site of Sebastian Garces, software developer in Vancouver, BC.
+  Notes on web development, software, and the occasional detour into Middle-earth.
+url: "https://sebastiangarces.com"
+baseurl: ""
+lang: en
+
+author:
+  name: Sebastian Garces
+  role: Software developer
+  location: Vancouver, BC
+  company: Safe Fleet
+  credential: "MCSD: Web Applications"
+
+# Links shown on the landing page. Add or remove entries freely;
+# `icon` must match one of the icons in _includes/icon.html.
+links:
+  - label: GitHub
+    url: https://github.com/sgarcesc
+    icon: github
+  - label: RSS feed
+    url: /feed.xml
+    icon: rss
+
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - LICENSE
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - docs/
