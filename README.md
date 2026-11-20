@@ -49,3 +49,9 @@ Pushing to `main` runs `.github/workflows/pages.yml`, which builds the site with
 
 The custom domain (`sebastiangarces.com`) is configured in the repository's Pages settings and
 served through Cloudflare, which handles HTTPS.
+
+## License
+
+- **Code** (layouts, includes, styles, build config, workflow): [MIT](LICENSE). Reuse freely.
+- **Content** (posts, page text, personal details, images): © Sebastian Garces, all rights
+  reserved. See [CONTENT-LICENSE.md](CONTENT-LICENSE.md).
